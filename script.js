@@ -15,7 +15,7 @@ document.getElementById('IMC').addEventListener('submit', function(event) {
     const imc = calculateIMC(peso, altura);
 
     // Determina a categoria do IMC
-    let resultado = "Seu IMC é: " + imc.toFixed(2) + " - ";
+    let resultado = "Seu IMC é: " + imc + " - ";
     if (imc < 18.5) {
         resultado += "Abaixo do peso";
     } else if (imc < 24.9) {
@@ -33,7 +33,7 @@ document.getElementById('IMC').addEventListener('submit', function(event) {
 
 // Função para calcular o IMC
 function calculateIMC(peso, altura) {
-    return peso / (altura * altura);
+    return (peso / (altura * altura)).toFixed(2);
 }
 
 function testCalculateIMC() {
@@ -41,20 +41,20 @@ function testCalculateIMC() {
     let altura1 = 1.75;
     let expectedIMC1 = 22.86;
     let result1 = calculateIMC(peso1, altura1);
-    console.log(result1 === expectedIMC1 ? "Test case 1 passed" : "Test case 1 failed");
+    console.log(result1 == expectedIMC1 ? "Test case 1 passed" : "Test case 1 failed");
   
     let peso2 = 50;
     let altura2 = 1.65;
     let expectedIMC2 = 18.37;
     let result2 = calculateIMC(peso2, altura2);
-    console.log(result2 === expectedIMC2 ? "Test case 2 passed" : "Test case 2 failed");
+    console.log(result2 == expectedIMC2 ? "Test case 2 passed" : "Test case 2 failed");
   
     let peso3 = 90;
     let altura3 = 1.80;
     let expectedIMC3 = 27.78;
     let result3 = calculateIMC(peso3, altura3);
-    console.log(result3 === expectedIMC3 ? "Test case 3 passed" : "Test case 3 failed");
+    console.log(result3 == expectedIMC3 ? "Test case 3 passed" : "Test case 3 failed");
   }
 
-
+testCalculateIMC();
 
