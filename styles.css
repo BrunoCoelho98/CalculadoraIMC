@@ -1,0 +1,13 @@
+#titulo {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#IMCAlert {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
